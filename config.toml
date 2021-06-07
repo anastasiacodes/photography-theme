@@ -3,7 +3,7 @@ baseURL = "http://examplesite.com"
 languageCode = "en-us"
 summaryLength = "10"
 theme = "kross-hugo-master"
-title = "Kross"
+title = "Photography"
 
 # css plugins
 [[params.plugins.css]]
@@ -34,18 +34,18 @@ name = "About"
 weight = 1
 
 [[menu.main]]
-URL = "blog"
-name = "Blog"
+URL = "packages"
+name = "Packages"
 weight = 2
 
 [[menu.main]]
-URL = "portfolio"
-name = "Portfolio"
+URL = "gallery"
+name = "Gallery"
 weight = 3
 
 [[menu.main]]
 URL = "contact"
-name = "Contact"
+name = "Get in Touch"
 weight = 4
 
 
@@ -54,7 +54,7 @@ weight = 4
 home = "Home"
 logo = ""
 # theme color
-theme_color = "#41228e"
+theme_color = "#15221C"
 # contact info
 phone = "+880 2544 658 256"
 email = "steve.fruits@email.com"
@@ -101,9 +101,13 @@ icon = "ti-instagram"
 URL = "#"
 
 [[params.social]]
-icon = "ti-dribbble"
+icon = "ti-email"
 URL = "#"
 
 [[params.social]]
 icon = "ti-twitter-alt"
+URL = "#"
+
+[[params.social]]
+icon = "ti-pinterest"
 URL = "#"

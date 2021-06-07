@@ -19,9 +19,12 @@
   {{ if site.Data.homepage.about.enable }}
   <!-- about -->
   <section class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto text-center">
+    <div class="about container">
+      <div class="row justify-content-around">
+        <div  class="col-md-5 text-center align-self-center">
+          <p data-font="title-1/medium">get to know me</p>
+        </div>
+        <div class="col-md-5 text-center">
           {{ with site.Data.homepage.about }}
           <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
           {{ if .button.enable }}
@@ -31,6 +34,7 @@
           {{ end }}
           {{ end }}
         </div>
+
       </div>
     </div>
   </section>

@@ -5,9 +5,30 @@ VERSION: Versoin Number
 -------------------------------------------------------------------*/
 @import "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Fira+Sans:ital,wght@1,700&display=swap";
 
+@font-face {
+  font-family: "Antro Vectra";
+  src: url("/fonts/antro_vectra/Antro_Vectra.otf") format("woff");
+}
+
+@font-face {
+  font-family: "Didonesque-Roman";
+  src: url("/fonts/Didonesque-Roman.ttf") format("woff");
+}
+
+body [data-font = 'title-1/medium'] {
+font-family: 'Antro Vectra';
+font-size: 1.875rem;
+font-weight: 400;
+font-style: normal;
+line-height: 1.2em;
+letter-spacing: 0em;
+text-decoration: ;
+text-transform: none;
+}
+
 body {
   line-height: 1.2;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Miller', serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   color: #4c4c4c
@@ -18,7 +39,7 @@ p {
   color: #4c4c4c;
   font-size: 15px;
   line-height: 1.8;
-  font-family: 'Cormorant Garamond', serif
+  font-family: 'Miller', serif
 }
 
 h1,
@@ -216,7 +237,7 @@ a:hover {
 
 .section-title {
   margin-bottom: 80px;
-  font-family: 'Cormorant Garamond', serif
+  font-family: 'Miller', serif
 }
 
 .bg-cover {
@@ -333,7 +354,7 @@ a:hover {
 }
 
 .font-tertiary {
-  font-family: 'Cormorant Garamond', serif !important
+  font-family: 'Antro Vectra', serif !important
 }
 
 .shadow {
@@ -438,7 +459,7 @@ textarea.form-control {
 }
 
 .navbar .nav-item .nav-link {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Miller', serif;
   text-transform: uppercase;
   padding: 15px
 }
@@ -918,9 +939,14 @@ blockquote {
 }
 
 /* Work section */
-section.work {
+.work {
 background-color: #15221C;
 }
-section.work h2, h4, p {
+.work h2, h4, p {
   color: white;
+}
+
+section .about {
+  background-color: #dce0d2;
+  padding: 20px;
 }

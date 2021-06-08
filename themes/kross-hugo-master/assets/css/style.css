@@ -3,7 +3,6 @@
 PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
-@import "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Fira+Sans:ital,wght@1,700&display=swap";
 
 @font-face {
   font-family: "Antro Vectra";
@@ -14,21 +13,42 @@ VERSION: Versoin Number
   font-family: "Didonesque-Roman";
   src: url("/fonts/Didonesque-Roman.ttf") format("woff");
 }
+@font-face {
+  font-family: "Nimbus Sans";
+  src: url("/fonts/Nimbus-Sans-D-OT-Ultra-Light_32757.ttf") format("woff");
+}
 
-body [data-font = 'title-1/medium'] {
+body [data-font = 'title-1/large'] {
 font-family: 'Antro Vectra';
 font-size: 1.875rem;
 font-weight: 400;
 font-style: normal;
 line-height: 1.2em;
 letter-spacing: 0em;
-text-decoration: ;
 text-transform: none;
+}
+body [data-font = 'title-1/medium'] {
+  font-family: 'Antro Vectra';
+  font-size: 45px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2rem;
+  letter-spacing: 0em;
+  text-transform: none;
+}
+body [data-font = 'title-2/medium'] {
+  font-family: Didonesque-Roman;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 1.1em;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  text-transform: none;
 }
 
 body {
   line-height: 1.2;
-  font-family: 'Miller', serif;
+  font-family: "Nimbus Sans",Helvetica,Roboto,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   color: #4c4c4c
@@ -101,12 +121,12 @@ h6,
 
 .btn {
   font-size: 22px;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Nimbus Sans';
   text-transform: capitalize;
-  padding: 16px 44px;
+  padding: 10px 35px;
   border-radius: 5px;
   font-weight: 600;
-  border: 0;
+  border: 1px solid goldenrod;
   position: relative;
   z-index: 1;
   transition: .2s ease
@@ -346,15 +366,15 @@ a:hover {
 }
 
 .font-primary {
-  font-family: roboto, serif !important
+  font-family: roboto, serif !important;
 }
 
 .font-secondary {
-  font-family: 'Fira Sans', sans-serif !important
+  font-family: 'Nimbus Sans' !important;
 }
 
 .font-tertiary {
-  font-family: 'Antro Vectra', serif !important
+  font-family: 'Antro Vectra', serif !important;
 }
 
 .shadow {
@@ -939,14 +959,14 @@ blockquote {
 }
 
 /* Work section */
-.work {
+.galleries {
 background-color: #15221C;
 }
-.work h2, h4, p {
+.galleries h2, .work h4, .work p {
   color: white;
 }
 
 section .about {
   background-color: #dce0d2;
-  padding: 20px;
+  padding: 50px 20px;
 }

@@ -1,9 +1,9 @@
 ---
 title: "Amazon increase income 1.5 Million"
 date: 2019-05-12T12:14:34+06:00
-image: "images/blog/post-2.jpg"
+image: "https://source.unsplash.com/random/350x175"
 description: "This is meta description."
-draft: true
+draft: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore

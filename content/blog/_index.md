@@ -1,3 +1,3 @@
 ---
-hidden: true
+title: "Featured Posts"
 ---

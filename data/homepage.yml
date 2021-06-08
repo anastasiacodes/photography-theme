@@ -5,31 +5,26 @@
 # about
 about:
   enable : true
+  title: "Oh, Hello!"
   content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   button:
     enable : true
     label : "learn more"
     URL : "about"
 
-# work
-work:
+# galleries
+galleries:
   enable : true
-  title : "My Work"
+  title : "Galleries"
   item: 
-    - logo : "images/experience/icon-1.png"
-      title : "Junior UX Designer"
-      company : "WEBEX"
-      duration : "Jan 2007 - Feb 2009"
-      
-    - logo : "images/experience/icon-2.png"
-      title : "UX & UI Designer"
-      company : "AUGMEDIX"
-      duration : "Mar 2009 - Aug 2014"
-      
-    - logo : "images/experience/icon-1.png"
-      title : "Senior UI Designer"
-      company : "THEMEFISHER"
-      duration : "Sep 2014 - Present"
+    - image : "https://source.unsplash.com/random/350x300"
+      title : "Engagement"
+
+    - image : "https://source.unsplash.com/random/350x300"
+      title : "Portrait"
+
+    - image : "https://source.unsplash.com/random/350x300"
+      title : "Lifestyle"
 
 # education
 education:
@@ -103,38 +98,38 @@ testimonial:
 clients_logo_slider:
   enable : true
   item:
-    - logo : "images/clients-logo/client-logo-1.png"
+    - logo : "https://source.unsplash.com/random/750x500"
       URL : "http://examplesite.com"
       
-    - logo : "images/clients-logo/client-logo-2.png"
+    - logo : "https://source.unsplash.com/random/750x500"
       URL : "#"
       
-    - logo : "images/clients-logo/client-logo-3.png"
+    - logo : "https://source.unsplash.com/random/750x500"
       URL : "http://examplesite.com"
       
-    - logo : "images/clients-logo/client-logo-4.png"
+    - logo : "https://source.unsplash.com/random/750x500"
       URL : "#"
       
-    - logo : "images/clients-logo/client-logo-5.png"
+    - logo : "https://source.unsplash.com/random/750x500"
       URL : "http://examplesite.com"
       
-    - logo : "images/clients-logo/client-logo-1.png"
+    - logo : "https://source.unsplash.com/random/750x500"
       URL : "#"
       
-    - logo : "images/clients-logo/client-logo-2.png"
+    - logo : "https://source.unsplash.com/random/750x500"
       URL : "http://examplesite.com"
       
-    - logo : "images/clients-logo/client-logo-3.png"
+    - logo : "https://source.unsplash.com/random/750x500"
       URL : "#"
       
-    - logo : "images/clients-logo/client-logo-4.png"
+    - logo : "https://source.unsplash.com/random/750x500"
       URL : "http://examplesite.com"
       
-    - logo : "images/clients-logo/client-logo-5.png"
+    - logo : "https://source.unsplash.com/random/750x500"
       URL : "#"
 
 # blog
 blog:
-  enable : false
-  title : "Blogs"
+  enable : true
+  title : "Featured Posts"
   # blog post comes from "content/blog" folder

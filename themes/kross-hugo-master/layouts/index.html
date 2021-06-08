@@ -22,10 +22,12 @@
     <div class="about container">
       <div class="row justify-content-around">
         <div  class="col-md-5 text-center align-self-center">
-          <p data-font="title-1/medium">get to know me</p>
+          <h2 data-font="title-1/medium">get to know</h2>
+          <p data-font="title-2/medium">Me and my Work</p>
         </div>
         <div class="col-md-5 text-center">
           {{ with site.Data.homepage.about }}
+          <h3 data-font="title-2/medium">{{.title | markdownify}}</h3>
           <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
           {{ if .button.enable }}
           {{ with .button }}
@@ -43,89 +45,46 @@
 
 
 
-  {{ if site.Data.homepage.work.enable }}
-  {{ with site.Data.homepage.work }}
-  <!-- work -->
-  <section class="section work">
+  {{ if site.Data.homepage.galleries.enable }}
+  {{ with site.Data.homepage.galleries }}
+  <!-- galleries -->
+  <section class="section galleries">
     <div class="container">
       <div class="row justify-content-around">
         <div class="col-lg-12 text-center">
-          <h2 class="section-title">{{ .title | markdownify }}</h2>
+          <h2 data-font="title-2/medium">{{ .title | markdownify }}</h2>
         </div>
         {{ range .item }}
         <div class="col-lg-3 col-md-4 text-center">
-          <img src="{{.logo | relURL }}" alt="icon">
-          <p class="mb-0">{{.duration}}</p>
+          <img class="img-fluid w-100" src="{{.image | relURL }}" alt="icon">
           <h4>{{.title }}</h4>
-          <h6 class="text-light">{{.company }}</h6>
         </div>
         {{ end }}
       </div>
     </div>
   </section>
-  <!-- /work -->
-  {{ end }}
-  {{ end }}
-
-  {{ if site.Data.homepage.education.enable }}
-  {{ with site.Data.homepage.education }}
-  <!-- education -->
-  <section class="section position-relative">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-title">{{ .title | markdownify }}</h2>
-        </div>
-        {{ range .item }}
-        <div class="col-lg-6 col-md-6 mb-80">
-          <div class="d-flex">
-            <div class="mr-lg-5 mr-3">
-              <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-            </div>
-            <div>
-              <p class="text-dark mb-1">{{.year}}</p>
-              <h4>{{ .title }}</h4>
-              <p class="mb-0 text-light">{{.academy}}</p>
-            </div>
-          </div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-    <!-- bg image -->
-    <img class="img-fluid edu-bg-image w-100" src="{{`images/backgrounds/education-bg.png`|relURL}}" alt="bg-image">
-  </section>
-  <!-- /education -->
+  <!-- /galleries -->
   {{ end }}
   {{ end }}
 
 
-  {{ if site.Data.homepage.service.enable }}
-  {{ with site.Data.homepage.service }}
-  <!-- services -->
+  {{ if site.Data.homepage.blog.enable }}
+  <!-- blog -->
   <section class="section">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h2 class="section-title">{{ .title | markdownify }}</h2>
+          <h2 data-font="title-2/medium">{{site.Data.homepage.blog.title | markdownify }}</h2>
         </div>
-        {{ range .item }}
-        <div class="col-md-4 mb-4">
-          <div class="card {{if .highlighted }} active-bg-primary {{end}} hover-shadow shadow">
-            <div class="card-body text-center px-4 py-5">
-              <i class="{{.icon }} icon mb-5 d-inline-block"></i>
-              <h4 class="mb-4">{{.title}}</h4>
-              <p>{{.content | markdownify}}</p>
-            </div>
-          </div>
-        </div>
+        {{ range first 3 (where .Site.RegularPages "Section" "blog")}}
+        {{ .Render "post" }}
         {{ end }}
       </div>
     </div>
   </section>
-  <!-- /services -->
+  <!-- /blog -->
   {{ end }}
-  {{ end }}
+
 
 
   {{ if site.Data.homepage.portfolio.enable }}
@@ -134,7 +93,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h2 class="section-title">{{ site.Data.homepage.portfolio.title | markdownify }}</h2>
+          <h2 data-font="title-2/medium">{{ site.Data.homepage.portfolio.title | markdownify }}</h2>
         </div>
       </div>
       <div class="row shuffle-wrapper">
@@ -181,13 +140,6 @@
         </div>
       </div>
     </div>
-    <!-- bg shapes -->
-    <img src="{{`images/backgrounds/map.png` | relURL }}" alt="map" class="img-fluid bg-map">
-    <img src="{{`images/illustrations/dots-group-v.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-1">
-    <img src="{{`images/illustrations/leaf-orange.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-2">
-    <img src="{{`images/illustrations/dots-group-sm.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-3">
-    <img src="{{`images/illustrations/leaf-pink-round.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-4">
-    <img src="{{`images/illustrations/leaf-cyan.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-5">
   </section>
   <!-- /testimonial -->
   {{ end }}
@@ -204,22 +156,7 @@
   <!-- /client logo slider -->
   {{ end }}
 
-  {{ if site.Data.homepage.blog.enable }}
-  <!-- blog -->
-  <section class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="section-title">{{site.Data.homepage.blog.title | markdownify }}</h2>
-        </div>
-        {{ range first 3 (where .Site.RegularPages "Section" "blog")}}
-        {{ .Render "post" }}
-        {{ end }}
-      </div>
-    </div>
-  </section>
-  <!-- /blog -->
-  {{ end }}
+  
 
 
 {{ end }}

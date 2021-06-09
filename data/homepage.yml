@@ -17,13 +17,13 @@ galleries:
   enable : true
   title : "Galleries"
   item: 
-    - image : "https://source.unsplash.com/random/350x300"
+    - image : "https://source.unsplash.com/random/550x550"
       title : "Engagement"
 
-    - image : "https://source.unsplash.com/random/350x300"
+    - image : "https://source.unsplash.com/random/550x550"
       title : "Portrait"
 
-    - image : "https://source.unsplash.com/random/350x300"
+    - image : "https://source.unsplash.com/random/550x550"
       title : "Lifestyle"
 
 # education

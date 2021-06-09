@@ -1,53 +1,46 @@
-{{ if site.Params.contact.enable }}
-<!-- contact -->
-<section class="section section-on-footer" data-background="{{`images/backgrounds/bg-dots.png` | absURL}}">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title">Contact Info</h2>
-      </div>
-      <div class="col-lg-8 mx-auto">
-        <div class="bg-white rounded text-center p-5 shadow-down">
-          <h4 class="mb-80">Contact Form</h4>
-          <form action="{{site.Params.contact.form_action}}" method="POST" class="row">
-            <div class="col-md-6">
-              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
-            </div>
-            <div class="col-md-6">
-              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
-            </div>
-            <div class="col-12">
-              <textarea name="message" id="message" class="form-control px-0 mb-4"
-                placeholder="Type Message Here"></textarea>
-            </div>
-            <div class="col-lg-6 col-10 mx-auto">
-              <button class="btn btn-primary w-100">send</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /contact -->
-{{ end }}
-
 <!-- footer -->
-<footer class="bg-dark footer-section">
+<footer class="footer-section">
   <div class="section">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
-          <h5 class="text-light">Email</h5>
-          <p class="text-white paragraph-lg font-secondary">{{site.Params.email}}</p>
+        <div class="col-md-4 text-center">
+          <img src="{{site.Params.logo}}">
+          <ul class="list-unstyled position-relative zindex-1">
+            {{ range site.Params.social }}
+            <li class="mb-3"><a href="{{.URL | safeURL }}"><i class="{{.icon}}"></i></a></li>
+            {{ end }}
+          </ul>
         </div>
-        <div class="col-md-4">
-          <h5 class="text-light">Phone</h5>
-          <p class="text-white paragraph-lg font-secondary">{{site.Params.phone}}</p>
+        <div class="col-md-4 text-center">
+          <div id="navigation">
+            <ul>
+              {{ $current := . }}
+              {{ range site.Menus.main }}
+              {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+              {{ $active = or $active (eq .Name $current.Title) }}
+              {{ if .HasChildren }}
+              <li >
+                <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ .Name }}
+                </a>
+                <div >
+                  {{ range .Children }}
+                  <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+                  {{ end }}
+                </div>
+              </li>
+              {{ else }}
+              <li class="nav-item {{ if $active }}active{{ end }}">
+                <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+              {{ end }}
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4">
-          <h5 class="text-light">Address</h5>
-          <p class="text-white paragraph-lg font-secondary">{{site.Params.address}}</p>
+        <div class="col-md-4 text-center">
+          <h5>Book with Me</h5>
+          <a href="#" class="btn">Book Today</a>
         </div>
       </div>
     </div>
@@ -57,11 +50,6 @@
   </div>
 </footer>
 <!-- /footer -->
-
-{{ "<!-- Google Map API -->" | safeHTML }}
-{{ if site.Params.map.enable }}
-<script src="{{ site.Params.map.gmap_api | safeURL }}"></script>
-{{ end }}
 
 {{ "<!-- JS Plugins -->" | safeHTML }}
 {{ range site.Params.plugins.js}}

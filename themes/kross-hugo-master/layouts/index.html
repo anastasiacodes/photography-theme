@@ -6,7 +6,7 @@
     </div>
 
     <!-- social icon -->
-    <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
+    <ul class="list-unstyled mt-3 position-relative zindex-1">
       {{ range site.Params.social }}
       <li class="mb-3"><a class="text-white" href="{{.URL | safeURL }}"><i class="{{.icon}}"></i></a></li>
       {{ end }}
@@ -57,15 +57,20 @@
         {{ range .item }}
         <div class="col-lg-3 col-md-4 text-center">
           <img class="img-fluid w-100" src="{{.image | relURL }}" alt="icon">
-          <h4>{{.title }}</h4>
+          <h4 data-font="title-1/small">{{.title }}</h4>
         </div>
         {{ end }}
       </div>
+      <div class="col-lg-12 text-center">
+        <a href="#" class="btn text-white">See all Galleries</a>
+      </div>
     </div>
   </section>
+
   <!-- /galleries -->
   {{ end }}
   {{ end }}
+
 
 
   {{ if site.Data.homepage.blog.enable }}
@@ -85,78 +90,25 @@
   <!-- /blog -->
   {{ end }}
 
-
-
-  {{ if site.Data.homepage.portfolio.enable }}
-  <!-- portfolio -->
-  <section class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 data-font="title-2/medium">{{ site.Data.homepage.portfolio.title | markdownify }}</h2>
-        </div>
-      </div>
-      <div class="row shuffle-wrapper">
-        {{ $item:= site.Data.homepage.portfolio.item_show }}
-        {{ range first $item (where .Site.RegularPages "Section" "portfolio") }}
-        <div class="col-lg-4 col-6 mb-4 shuffle-item">
-          <div class="position-relative rounded hover-wrapper">
-            <img src="{{.Params.image | absURL }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-            <div class="hover-overlay">
-              <div class="hover-content">
-                <a class="btn btn-light btn-sm" href="{{ .Permalink | safeURL }}">view project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-  </section>
-  <!-- /portfolio -->
-  {{ end }}
-
-
-  {{ if site.Data.homepage.testimonial.enable }}
-  {{ with site.Data.homepage.testimonial }}
-  <!-- testimonial -->
-  <section class="section bg-primary position-relative testimonial-bg-shapes">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="section-title text-white mb-5">{{ .title | markdownify }}</h2>
-        </div>
-        <div class="col-lg-10 mx-auto testimonial-slider">
-          {{ range .item }}
-          <!-- slider-item -->
-          <div class="text-center testimonial-content">
-            <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
-            <p class="text-white mb-4">{{.content | markdownify}}</p>
-            <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{{.image | absURL }}" alt="client-image">
-            <h4 class="text-white">{{.name }}</h4>
-            <h6 class="text-light mb-4">{{ .designation }}</h6>
-          </div>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /testimonial -->
-  {{ end }}
-  {{ end }}
-
-
+  
   {{ if site.Data.homepage.clients_logo_slider.enable }}
-  <!-- client logo slider -->
-  <section class="section pb-0">
+  <!-- slider -->
+  <section class="section">
     <div class="container">
       {{ partial "client-slider.html" . }}
     </div>
   </section>
-  <!-- /client logo slider -->
+  <!-- /slider -->
   {{ end }}
 
-  
+
+  <!-- contact form -->
+  <section class="section">
+    <div class="container">
+      {{ partial "contact-form.html" . }}
+    </div>
+  </section>
+  <!-- /contact form -->
 
 
 {{ end }}

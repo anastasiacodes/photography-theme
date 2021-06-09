@@ -4,7 +4,7 @@
       {{ if site.Params.logo }}
       <img src="{{ site.Params.logo | absURL }}" alt="{{site.Title}}">
       {{ else }}
-      <h3 class="text-white font-tertiary">{{site.Title}}</h3>
+      <h3 data-font = 'title-1/large' class="text-white">{{site.Title}}</h3>
       {{ end }}
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -30,7 +30,7 @@
           </div>
         </li>
         {{ else }}
-        <li class="nav-item {{ if $active }}active{{ end }}">
+        <li data-font="navigation" class="nav-item {{ if $active }}active{{ end }}">
           <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
         </li>
         {{ end }}

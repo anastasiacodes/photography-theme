@@ -997,3 +997,11 @@ section .about {
 .footer-section .list-unstyled{
   justify-content: left;
 }
+
+.mt-0 {
+  margin: 0 1rem 1rem 1rem;
+}
+
+.theme-color a{
+  color: var(--primary-color);
+}

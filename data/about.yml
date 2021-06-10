@@ -1,13 +1,13 @@
 # work process
-work_process:
+photography_process:
   enable : true
-  title : "Work Process"
+  title : "Photography Process"
   item:
-  - title : "Research and Plan"
+  - title : "Snap"
     icon : "images/icons/plan.png"
     content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     
-  - title : "Design and Develop"
+  - title : "Edit"
     icon : "images/icons/design.png"
     content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     
@@ -16,26 +16,39 @@ work_process:
     content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 
-# team
-team:
-  enable: true
-  title : "My Team"
-  team_member:
-    - title : "Jack Schenziwe"
-      image : "images/team/member-1.png"
-      designation : "Project Manager"
-      
-    - title : "Julias Carlie"
-      image : "images/team/member-2.png"
-      designation : "Web Developer"
-      
-    - title : "John Doe"
-      image : "images/team/member-3.png"
-      designation : "Designer"
-
-
 # client logo slider
 clients_logo_slider:
   enable : true
-  title : "My Clients"
+  title : "My Work"
   # clients logo comes from 'data/homepage.yml' file
+
+
+
+# facts 
+facts:
+  enable: true
+  title: "Facts about Me"
+  item:
+  - title: "I love my dogs"
+    image : "https://source.unsplash.com/random/200X300"
+    hover_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  
+  - title: "I love West Virginia"
+    image : "https://source.unsplash.com/random/200X300"
+    hover_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  
+  - title: "I love board games"
+    image : "https://source.unsplash.com/random/200X300"
+    hover_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."  
+  
+  - title: "I love love stories"
+    image : "https://source.unsplash.com/random/200X300"
+    hover_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  
+  - title: "Did I mention I love my dogs"
+    image : "https://source.unsplash.com/random/200X300"
+    hover_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  
+  - title: "I love coffee"
+    image : "https://source.unsplash.com/random/200X300"
+    hover_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
